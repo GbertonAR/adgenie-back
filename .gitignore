@@ -1,10 +1,13 @@
 # Entornos virtuales
 venv/
 temp/
+BK/
+node_modules/
 venv_azure/ # O el nombre que le hayas dado a tu venv
 *.pyc
 *.mp3
 __pycache__/
+.env
 
 # Logs y datos temporales
 *.log

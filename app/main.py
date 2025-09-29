@@ -3,7 +3,7 @@ from app.routers import chat, metrics
 from app.database import database, metadata, engine # Importa motor y metadata
 import os
 import sys
-
+import uvicorn
 # Importación de CORS (para desarrollo)
 from fastapi.middleware.cors import CORSMiddleware 
 
@@ -79,4 +79,8 @@ async def startup():
     await database.connect()
     print("[DEBUG: STARTUP] Conexión a la base de datos establecida exitosamente.")
 
-print("--- [DEBUG: main.py] Configuración inicial de FastAPI completada. ---")
+    print("--- [DEBUG: main.py] Configuración inicial de FastAPI completada. ---")
+
+
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000)

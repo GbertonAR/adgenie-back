@@ -15,7 +15,7 @@ app = FastAPI(title="AdGenie Backend API")
 # Configuración de CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://delightful-flower-08fe3401e.1.azurestaticapps.net/"], 
+    allow_origins=["*"], 
         #allow_origins=["http://localhost:5173"], 
     allow_credentials=True,
     allow_methods=["*"],
